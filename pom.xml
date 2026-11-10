@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project xmlns="http://maven.apache.org/POM/4.0.0"> 
+    <modelVersion>4.0.0</modelVersion> 
+  
+    <parent> 
+        <groupId>org.springframework.boot</groupId> 
+        <artifactId>spring-boot-starter-parent</artifactId> 
+        <version>3.2.0</version> 
+    </parent> 
+  
+    <groupId>com.example</groupId> 
+    <artifactId>student-grade-api</artifactId> 
+    <version>1.0.0</version> 
+  
+    <properties> 
+        <java.version>21</java.version> 
+        <sonar.organization>zenatomah</sonar.organization> 
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url> 
+        <sonar.projectKey>zenatomah_student-grade-api</sonar.projectKey> 
+    </properties> 
+  
+    <dependencies> 
+        <dependency> 
+            <groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-web</artifactId> 
+        </dependency> 
+        <dependency> 
+            <groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-test</artifactId> 
+            <scope>test</scope> 
+        </dependency> 
+       <dependency> 
+    <groupId>org.springframework.boot</groupId> 
+    <artifactId>spring-boot-starter-web</artifactId> 
+    <exclusions> 
+        <exclusion> 
+            <groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-logging</artifactId> 
+        </exclusion> 
+    </exclusions> 
+</dependency> 
+        <dependency> 
+            <groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-log4j2</artifactId> 
+        </dependency> 
+        
+    </dependencies> 
+  
+    <build> 
+        <plugins> 
+            <plugin> 
+                <groupId>org.springframework.boot</groupId> 
+                <artifactId>spring-boot-maven-plugin</artifactId> 
+            </plugin> 
+        </plugins> 
+    </build> 
+</project> 
