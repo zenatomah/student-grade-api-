@@ -26,12 +26,6 @@ jobs:
       - name: Build and test with Maven
         run: mvn --batch-mode clean verify
 
-      - name: Check token exists
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          if [ -z "$SONAR_TOKEN" ]; then echo "TOKEN IS EMPTY"; else echo "TOKEN IS SET"; fi
-
       - name: SonarQube Cloud scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
